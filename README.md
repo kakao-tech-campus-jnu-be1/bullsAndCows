@@ -27,3 +27,27 @@
 
 10.  10번의 시도 안에 숫자를 맞추지 못하면 패배 메시지를 출력한다.
 
+
+
+```mermaid
+graph TD
+
+A[Start] --> B[Clone repository / Download source code]
+B --> C[Open terminal]
+C --> D[Run 'python main.py']
+D --> E[Computer generates random 4-digit number]
+E --> F[Guess the number]
+F --> G{Valid input?}
+G -- Yes --> H[Calculate Bull and Cow]
+H --> I[Match within 10 attempts?]
+I -- Yes --> J[Print winning message]
+J --> K[End]
+I -- No --> L[Print defeat message]
+L --> K
+
+G -- No --> F
+F --> G
+
+I -- No --> M[End]
+```
+
